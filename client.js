@@ -11,10 +11,14 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on("data", (data) => {
-    console.log("Connection established");
+    console.log("Successfully connected to game server");
     console.log(data);
    // conn.write("HEre")
     // code that does something when the connection is first established
+  });
+
+  conn.on('connect', () => {
+    conn.write('Name: AAB');
   });
 
 
