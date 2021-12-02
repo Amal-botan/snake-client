@@ -19,13 +19,17 @@ const connect = function () {
 
   conn.on('connect', () => {
     conn.write('Name: AAB');
-  });
 
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, 2000);
+  
+  });
 
   return conn;
 };
 
 console.log("Connecting ...");
-connect();
+
 
 module.exports = connect;
